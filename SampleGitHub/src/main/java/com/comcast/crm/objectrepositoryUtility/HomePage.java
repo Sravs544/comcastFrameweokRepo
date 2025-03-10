@@ -15,7 +15,9 @@ WebDriver driver;
 		PageFactory.initElements(driver, this);
 	}
 	//object identification
-
+	
+	@FindBy(linkText="Products")
+	private WebElement productLink;
 
 	@FindBy(linkText="Organizations")
 	private WebElement orgLink;
@@ -59,6 +61,12 @@ WebDriver driver;
 	
 	public WebElement getHeadertxt() {
 		return headertxt;
+	}
+	
+	
+
+	public WebElement getProductLink() {
+		return productLink;
 	}
 
 	//business lib
